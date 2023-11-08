@@ -1,7 +1,27 @@
 function myArticles () {
 
-    const productsFromDb = ["Aspirateur", "Mixeur", "Grille-Pain"]
-    const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    const productsFromDb = [
+        {
+            title: "Aspirateur",
+            price: 20,
+            isPunblished: true,
+        },
+        {
+            title: "Grille-Pain",
+            price: 30,
+            isPublished: true,
+        }, 
+        {
+            title: "Mixeur",
+            price: 40,
+            isPublished: false,
+        }, 
+        {
+            title: "Lampe",
+            price: 5,
+            isPublished: true,
+        } 
+]
 
     return (
         <>
@@ -9,8 +29,9 @@ function myArticles () {
                 {productsFromDb.map((products) => {
                     return (
                         <article>
-                            <h2>{products}</h2>
-                            <p>{lorem}</p>
+                            <h2>{products.title}</h2>
+                            <p>{products.price + ` euros`}</p>
+                            {products.isPublished ? <p>Produit disponible</p> : <p>Produit indisponible</p>} 
                         </article>
                     )
                 })}
