@@ -1,7 +1,7 @@
 function Header () {
     const userOnline = true
     const name = 'Nathan';
-    const ProductsInCart = 5;
+    const productsInCart = 5;
     return (
         <header>
             <nav>
@@ -11,7 +11,7 @@ function Header () {
                     <li>Home</li>
                     <li>Products</li>
                     
-                    { ProductsInCart > 0 ? <li>Cart : {ProductsInCart} </li> : <li>Pas de produits dans le panier</li> }
+                    { productsInCart > 0 ? <li>Cart : {productsInCart} </li> : <li>Pas d'items au panier</li> }
                 </lu>
             </nav>
         </header>
