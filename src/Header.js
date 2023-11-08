@@ -1,11 +1,14 @@
 function Header () {
+    const userOnline = true
+    const name = 'Nathan'
     return (
         <header>
             <nav>
                 <lu>
                     <li>Home</li>
                     <li>Products</li>
-                    <li>About us</li>
+                    { userOnline ? <li>{name}</li> : <li>Veuillez vous connecter</li> }
+                    
                 </lu>
             </nav>
         </header>
